@@ -1,0 +1,317 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link href="curindex.css" rel="stylesheet" />
+<script src="jquery-1.11.1.min.js" ></script>
+</head>
+<style>
+html { overflow:hidden;}
+.goTop{ display:none; position:fixed; top:50%; right:20px; width:47px; height:47px; border:1px solid #fff; border-radius:50%; z-index:999; color:#fff; cursor:pointer; margin-top:120px; transition:all .3s;}
+.goTop:hover{ color:#cb8386; background-color:#fff;}
+.goTop span{ font:400 44px/44px consolas; position:absolute; left:10px; top:7px; width:26px; height:12px; overflow:hidden;}
+.goTop span i{ position:absolute; top:-11px; left:-5px;}
+.goTop em{ position:absolute; left:10px; bottom:4px; font-size:14px;}
+</style>
+<body>
+<ul class="p-inddex">
+	<li class="active"></li>
+	<li></li>
+	<li></li>
+	<li></li> 
+</ul>
+<p class="goTop">
+	<span><i>◇</i></span>
+    <em>TOP</em>
+</p>
+<div class="page-wrap">
+	<div class="page">
+    	<div class="header"></div>
+    </div>
+    <div class="page page-stage1">
+        <div class="s1center-wrap">
+    		<h2>活灵活现 每日返息</h2>
+        	<a class="buynowBtn" href="#">立即抢购</a>
+            <div class="s1-rline"><span></span></div>
+        	<div class="rate-wrap">
+                <span>预期年化收益(%)</span>
+                <em class="money" data-value="7.30"></em>
+                <div class="colud-wrap">
+                	<div class="colud-img"></div>
+                    <!--<img src="images/s1rataBttomColud.png" >-->
+                </div>
+                <img src="images/s1jd.png" class="s1-speed">
+            </div>
+        </div>
+        <div class="rata-line-a"></div>
+        <div class="rata-line-b"></div>
+        <img src="images/s1txt1.png" class="st1">
+        <img src="images/s1txt2.png" class="st2">
+        <img src="images/s1txt3.png" class="st3">
+        <img src="images/s1txt4.png" class="st4">
+    </div>
+    <div class="page page-stage2">
+        
+        <div class="statistics-wrap">
+            <h2>让你的钱去挣钱</h2>
+            <p class="p-info1">收益复投<span><font>7</font>年翻番</span></p>
+            <p class="p-info2">赚钱，从来没有如此舒心</p>
+        	<a class="buynowBtn" href="#">立即抢购</a>
+            <div class="s1-rline"><span></span></div>
+        	<img src="images/s2floor.png" class="s2-floor"/>
+        	<img src="images/column1.png" class="col1"/>
+        	<img src="images/column2.png" class="col2"/>
+        	<img src="images/column3.png" class="col3"/>
+        	<img src="images/column4.png" class="col4"/>
+            <div class="s2-line"><div class="imgline-wrap"><img src="images/s2line.png" ></div></div>
+            <img src="images/s2dot1.png" class="s2dot1" />
+            <img src="images/s2dot2.png" class="s2dot2" />
+            <img src="images/s2dot3.png" class="s2dot3" />
+            <img src="images/s2dot4.png" class="s2dot4" />
+        	<div class="s2-bottom-txt">
+            	<p class="line"></p>
+            	<p class="line"></p>
+                <img src="images/s2txt1.png" class="s2txt1" />
+                <img src="images/s2txt2.png" class="s2txt2" />
+                <img src="images/s2txt3.png" class="s2txt3" />
+            </div>
+        </div>
+        
+    </div>
+    <div class="page page-stage3">
+        <div class="s2-content">
+        	<h2>随时支取</h2>
+        	<a class="buynowBtn" href="#">立即抢购</a>
+            <div class="s1-rline"><span></span></div>
+        	<img src="images/s3cloud1.png" class="s3cloud1" />
+        	<img src="images/s3cloud2.png" class="s3cloud2" />
+        	<img src="images/s3cloud3.png" class="s3cloud3" />
+        	<div class="safe-box">
+            	<div class="s3-circular"></div>
+            	<div class="takeMoney"><img src="images/takeMoney.png" /></div>
+                <img src="images/s3card.png" class="s3card" />
+            </div>
+            <img src="images/s3txt1.png" class="s3txt1" />
+            <img src="images/s3txt2.png" class="s3txt2" />
+            <img src="images/s3txt3.png" class="s3txt3" />
+        </div>
+    </div>
+    <div class="page page-stage4">
+        <div class="s4center-wrap">
+    		<h2>收益安全有保障</h2>
+        	<a class="buynowBtn" href="#">立即抢购</a>
+            <div class="s1-rline"><span></span></div>
+        	<div class="s4img1">
+            	<img src="images/s4img1.png" />
+                <span>优质债权</span>
+            </div>
+        	<div class="s4img2">
+            	<img src="images/s4img2.png" />
+            	<span>多重风控审核</span>
+            </div>
+        	<div class="s4img3">
+            	<img src="images/s4img3.png" />
+            	<span>第三方资金托管<br/><font>资金动态实时透明</font></span>
+            </div>
+        	<div class="s4img4">
+            	<img src="images/s4img4.png" />
+            	<span>香港上市公司担保</span>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+    	<div class="footer"></div>
+    </div>
+</div>
+
+</body>
+<script>
+
+setTimeout(function(){$(".page").eq(1).addClass("active")},100)
+var itopRange = false;
+
+var pageNum = 0,
+    isBoolean = true,
+	wheelBoolean = true,
+	pageSize = $('.page').size(),
+	direction,
+	pIndex = 0,
+	timer;
+showGoTop();
+$(".goTop").click(function(){
+	if(itopRange){
+		$('.page-wrap').animate({top:itopRange},1000,function(){
+			pageNum = 0;
+			pIndex = 0;
+			$(".page").eq(1).addClass("active").siblings().removeClass("active");
+			setTimeout(function(){
+				showMoney($(".money").eq(0));	
+			},1000);
+			$('.p-inddex li').removeClass("active").eq(0).addClass("active");
+			showGoTop();
+		});
+	}
+	
+})
+
+init();//初始化
+
+function init(){
+	//rederHtml();
+	bindEvent();	
+}
+
+function bindEvent(){
+
+	topNum_ = 1 - $('.page').eq(0).find(".header").height()/$(window).height();
+	$('.page-wrap').css({'top':-topNum_*100+'%'});
+	if(pIndex==1||pIndex==0){
+		setTimeout(function(){
+			showMoney($(".money").eq(0));	
+		},600)
+	}
+	
+}
+
+function showGoTop(){
+	if(pIndex == 0){
+		$(".goTop").fadeOut();
+	}else{
+		$(".goTop").fadeIn();
+	}	
+}
+
+//Rolling screen
+function pageRoll(){
+	showGoTop();
+	if( pIndex<0 ){
+		pIndex=0;	
+	}else if( pIndex>pageSize ){
+		pIndex=pageSize;
+	}
+	if( pIndex>1 ){
+		$(".money").html("");
+	}
+	
+	var endNum = $('.page').eq(pageSize-1).find(".footer").height()/$(window).height(),
+		topNum = $('.page').eq(0).find(".header").height()/$(window).height(),
+		topRange;
+	itopRange = -(1-topNum)*100+'%';
+	if(pIndex<=0){
+		topRange = -(1-topNum)*100+'%';
+	}else{
+		topRange = pageNum<pageSize-1?pageNum*-100+'%':(pageSize-2)*-100-endNum*100+'%';	
+	}
+	
+	if(direction){
+		pIndex==0||pIndex==pageSize-2 ? "" : $(".page").removeClass("active");
+		if(pIndex==1){
+			setTimeout(function(){
+				showMoney($(".money").eq(0));	
+			},1300)	
+		}
+	}else{
+		pIndex==1||pIndex==pageSize-1||pIndex==6 ? "" : $(".page").removeClass("active");
+	}
+
+
+	if(pIndex-1<pageSize-2&&pIndex-1>=0){
+		var oLi_ = $('.p-inddex li').eq(pIndex-1);
+		oLi_.hasClass("active")?"":$('.p-inddex li').removeClass("active").eq(pIndex-1).addClass("active");
+	}
+	
+	$('.page-wrap').animate({top:topRange},1000,function(){
+		
+		var oP1 = $('.page').eq(pageNum);
+		( oP1.hasClass("active")||pageNum==0||pageNum==pageSize-1 )?"":oP1.addClass('active').siblings().removeClass('active');
+		
+		isBoolean = wheelBoolean = true;
+		
+	})
+	
+}
+
+/* 点击锚点翻屏 */
+$('.p-inddex li').click(function(){
+	var oIndex = $(this).index();
+	$(this).addClass('active').siblings().removeClass('active');
+	pageNum = pIndex = oIndex+1;
+	pageRoll();
+});
+
+document.onmousewheel = function(ev){  // 执行鼠标滚轮（IE，chrome）
+                  var ev = ev || window.event;
+                  wheelFn(ev)   
+};
+ 
+if(document.addEventListener){
+                  document.addEventListener('DOMMouseScroll',function(ev){ // 执行鼠标滚轮（兼容火狐）
+                        var ev = ev || window.event;
+                        wheelFn(ev)   
+                  },false);
+}
+
+//false下 true上
+function wheelFn(ev){ // 鼠标滚轮滚动函数 
+                  var isTrue;
+				  
+				  if(wheelBoolean==false){
+                        return;
+                  }
+                  wheelBoolean = false;
+				  
+                  if(ev.wheelDelta){
+                        isTrue = ev.wheelDelta>0?true:false;
+                  }else{
+                        isTrue = ev.detail<0?true:false;
+                  }
+
+                  if(isTrue){
+                        pageNum --;
+						pIndex = pageNum;
+                        if(pageNum<0){
+                              pageNum = 0;
+                        }
+                  }else{
+                        pageNum++;
+						pIndex = pageNum;
+                        if(pageNum>pageSize-1){
+                              pageNum = pageSize-1;
+                        }
+                  }
+				  
+				  direction = isTrue;
+                  pageRoll();
+				  
+}
+
+function showMoney(a) {
+    var b = a,
+    c = 1e5 * parseFloat(b.attr("data-value"));
+    if (1e4 > c) {
+        var d = (c / 1e5).toFixed(2);
+        b.html(d)
+    } else var e = 0,
+    f = 0,
+    g = 0,
+    h = setInterval(function() {
+        if (9 > g) {
+            g++,
+            e += f * Math.random();
+            var a = (e / 1e5).toFixed(2);
+            //b.html(a + "%"),
+			b.html(a),
+            f = c - e
+        } else {
+            var a = (c / 1e5).toFixed(2);
+            //b.html(a + "%"),
+			b.html(a),
+            clearInterval(h)
+        }
+    },
+    50)
+}
+
+</script>
+</html>
